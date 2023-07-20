@@ -1,0 +1,17 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
+<tr>
+  <th>Title</th>
+
+</tr>
+<p><%= @book.title %></p>
+
+<h2>Body</h2>
+<p><%= @book.body %></p>
+
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<p><a href="/books">Back</a></p>
+<%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "Are you sure？" %>
